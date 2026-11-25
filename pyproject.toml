@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "password-generator"
+version = "1.0.0"
+description = "Random password generator CLI — one password per line"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Jalal Khan" }]
+
+[project.scripts]
+password-generator = "password_gen.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["password_gen*"]
